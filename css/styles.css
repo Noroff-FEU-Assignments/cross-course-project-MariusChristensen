@@ -12,6 +12,22 @@ main {
   min-height: 70vh;
 }
 
+header,
+footer {
+  background: #153e4d;
+  text-align: center;
+  border: 3px solid #3790b0;
+}
+
+a,
+p,
+h1,
+h2,
+h3 {
+  color: #ececec;
+  text-decoration: none;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -20,7 +36,6 @@ main {
 .slogan {
   display: flex;
   justify-content: center;
-  text-align: center;
   font-size: 2em;
 }
 
@@ -54,20 +69,4 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
-}
-
-header,
-footer {
-  background: #153e4d;
-  text-align: center;
-  border: 3px solid #3790b0;
-}
-
-a,
-p,
-h1,
-h2,
-h3 {
-  color: #ececec;
-  text-decoration: none;
 }
