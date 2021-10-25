@@ -34,8 +34,8 @@ h3 {
 }
 
 .slogan {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   font-size: 2em;
 }
 
