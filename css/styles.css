@@ -1,3 +1,10 @@
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+  font-family: Montserrat;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@500&display=swap");
+}
+
 /* Global Styles*/
 
 body {
@@ -29,13 +36,19 @@ footer {
   align-items: center;
 }
 
-a,
-p,
 h1,
 h2,
 h3 {
   color: #ececec;
   text-decoration: none;
+  font-family: Montserrat;
+}
+
+a,
+p {
+  color: #ececec;
+  text-decoration: none;
+  font-family: Roboto;
 }
 
 /* Homepage */
