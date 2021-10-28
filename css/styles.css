@@ -1,6 +1,8 @@
+/* Global Styles*/
+
 body {
-  margin: 0;
-  border: 0;
+  min-height: 100vh;
+  margin: 0px;
 }
 
 main {
@@ -9,7 +11,6 @@ main {
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-  min-height: 70vh;
 }
 
 header,
@@ -17,6 +18,15 @@ footer {
   background: #153e4d;
   text-align: center;
   border: 3px solid #3790b0;
+}
+
+.header-nav,
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+  align-items: center;
 }
 
 a,
@@ -28,9 +38,16 @@ h3 {
   text-decoration: none;
 }
 
+/* Homepage */
+
 .logo {
   display: flex;
   justify-content: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 .slogan {
@@ -38,6 +55,8 @@ h3 {
   text-align: center;
   font-size: 2em;
 }
+
+/* CTA Button */
 
 .button-wrapper {
   display: block;
@@ -61,12 +80,4 @@ h3 {
 
 .cta-button:hover {
   background-color: #153e4d;
-}
-
-.header-nav,
-.footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 10px;
 }
