@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
 
 /* Global Styles*/
 
@@ -19,27 +25,6 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-}
-
-.nav-mobile {
-  display: none;
-}
-
-#hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ nav {
-  display: block;
-}
-
-.nav-mobile__menu {
-  display: none;
-}
-
-.fa-bars {
-  color: #ececec;
-  font-size: 52px;
 }
 
 header,
@@ -61,6 +46,34 @@ footer {
 .footer-nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px 0px 0px 0px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+.nav-mobile__menu {
+  position: absolute;
+  background-color: #153e4d;
+  border: 3px solid #3790b0;
+  width: 100vw;
+  left: 0px;
+  top: 66px;
+  display: none;
+}
+
+.fa-bars {
+  color: #ececec;
+  font-size: 52px;
 }
 
 .footer-nav > *:first-child {
@@ -76,20 +89,20 @@ h2,
 h3 {
   color: #ececec;
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 ul {
   list-style: none;
   color: #ececec;
-  font-family: Roboto;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 a,
 p {
   color: #ececec;
   text-decoration: none;
-  font-family: Roboto;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 /* Homepage */
@@ -102,7 +115,7 @@ p {
 .logo img {
   max-width: 90%;
   height: auto;
-  }
+}
 
 .slogan {
   display: block;
@@ -133,15 +146,15 @@ p {
   color: #ececec;
 }
 
-
 @media screen and (max-width: 600px) {
   .nav-mobile {
     display: block;
+    padding: 5px 0px 0px 0px;
   }
 
-.button {
-  padding: 10px 30px;
-}
+  .button {
+    padding: 10px 30px;
+  }
 
   .nav-desktop {
     display: none;
