@@ -10,13 +10,22 @@
 
 /* Global Styles*/
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   margin: 0px;
   border: none;
-  box-sizing: border-box;
 }
 
 .leaf {
@@ -51,6 +60,7 @@ footer {
 
 .nav-mobile {
   display: none;
+  padding-left: 0px;
 }
 
 #hamburger-menu {
