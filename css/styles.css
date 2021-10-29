@@ -60,7 +60,6 @@ footer {
 
 .nav-mobile {
   display: none;
-  padding-left: 0px;
 }
 
 #hamburger-menu {
@@ -75,7 +74,8 @@ footer {
   position: absolute;
   background-color: #153e4d;
   border: 3px solid #3790b0;
-  width: 100vw;
+  max-width: 100vw;
+  text-align: left;
   left: 0px;
   top: 66px;
   display: none;
@@ -103,9 +103,14 @@ h3 {
 }
 
 ul {
+  padding: 0px 20px;
   list-style: none;
   color: #ececec;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+li:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 a,
@@ -133,6 +138,7 @@ p {
   font-size: 2em;
   max-width: 90%;
   margin: 0 auto;
+  text-shadow: 5px 5px 5px #153e4d;
 }
 
 /* CTA Button */
@@ -156,7 +162,7 @@ p {
   color: #ececec;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .nav-mobile {
     display: block;
     padding: 5px 0px 0px 0px;
