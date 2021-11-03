@@ -50,6 +50,7 @@ footer {
   justify-content: space-between;
   margin: 0px 20px 0px 20px;
   align-items: center;
+  padding: 5px 0px 0px 0px;
 }
 
 .footer-nav {
@@ -94,9 +95,11 @@ footer {
   justify-self: end;
 }
 
+.shop-link,
 h1,
 h2,
 h3 {
+  font-size: 1.8em;
   color: #ececec;
   text-decoration: none;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -164,12 +167,13 @@ p {
 
 @media screen and (max-width: 720px) {
   .nav-mobile {
-    display: block;
-    padding: 5px 0px 0px 0px;
+    display: flex;
   }
 
   .button {
     padding: 10px 30px;
+    font-size: 1.8em;
+    border-radius: 20px;
   }
 
   .nav-desktop {
