@@ -136,10 +136,11 @@ p {
   height: auto;
 }
 
-.slogan {
+.slogan,
+.slogan h1 {
   display: block;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.8em;
   max-width: 90%;
   margin: 0 auto;
   text-shadow: 5px 5px 5px #153e4d;
