@@ -136,14 +136,17 @@ p {
   height: auto;
 }
 
-.slogan,
-.slogan h1 {
+.slogan {
   display: block;
   text-align: center;
   font-size: 1.8em;
   max-width: 90%;
   margin: 0 auto;
   text-shadow: 5px 5px 5px #153e4d;
+}
+
+.slogan h1 {
+  font-size: 2em;
 }
 
 /* CTA Button */
@@ -180,5 +183,13 @@ p {
 
   .nav-desktop {
     display: none;
+  }
+
+  .slogan {
+    font-size: 1.5em;
+  }
+
+  .slogan h1 {
+    font-size: 1.8em;
   }
 }
