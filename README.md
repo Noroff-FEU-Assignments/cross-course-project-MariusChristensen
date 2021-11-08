@@ -1,1 +1,3 @@
-# MA3-RainyDays
+# HTML&CSS Course Assignment Rainy Days
+
+
