@@ -36,6 +36,10 @@ body {
   background-position-y: bottom;
 }
 
+.background {
+  background: #153e4d;
+}
+
 header,
 footer {
   background: #153e4d;
@@ -147,6 +151,7 @@ p {
 
 .slogan h1 {
   font-size: 2em;
+  margin: 0px;
 }
 
 /* CTA Button */
@@ -163,11 +168,59 @@ p {
   padding: 20px 50px;
   width: auto;
   margin: 20px;
+  border: #3790b0 solid 3px;
 }
 
 .cta-button {
   background-color: #3790b0;
   color: #ececec;
+}
+
+.cta-button:hover {
+  background: #153e4d;
+  text-decoration: underline;
+}
+
+/* Shop page */
+.shop-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  margin: 10px;
+}
+
+.shop-wrapper h1 {
+  margin: 0px;
+  margin-top: 30px;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  max-width: 1500px;
+  margin: 10px auto;
+}
+
+.shop h2 {
+  font-size: 1.2em;
+}
+
+.shop-her,
+.shop-him {
+  display: grid;
+  margin: 10px;
+  border: #3790b0 solid 3px;
+}
+
+.shop-her img,
+.shop-him img {
+  width: 100%;
+}
+
+.cta-button-small {
+  font-size: 1.2em;
+  padding: 10px 30px;
 }
 
 @media (max-width: 720px) {
@@ -191,5 +244,13 @@ p {
 
   .slogan h1 {
     font-size: 1.8em;
+  }
+
+  .shop {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-button-small {
+    font-size: 1em;
   }
 }
