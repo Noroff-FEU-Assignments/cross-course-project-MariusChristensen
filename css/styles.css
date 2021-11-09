@@ -223,21 +223,24 @@ p {
   padding: 10px 30px;
 }
 
-/* About and Contact page */
+/* About, Contact and page */
 .about-wrapper,
-.contact-wrapper {
+.contact-wrapper,
+.product-wrapper {
   margin: 10px auto;
   max-width: 700px;
   text-align: center;
 }
 
 .about-wrapper p,
-.contact-wrapper p {
+.contact-wrapper p,
+.product-wrapper p {
   margin: 20px;
 }
 
 .about-wrapper h1,
-.contact-wrapper h1 {
+.contact-wrapper h1,
+.product-wrapper h1 {
   margin-bottom: 50px;
 }
 
@@ -294,5 +297,12 @@ p {
 
   .cta-button-small {
     font-size: 1em;
+  }
+
+  .about-wrapper h1,
+  .contact-wrapper h1,
+  .product-wrapper h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
   }
 }
