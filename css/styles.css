@@ -179,6 +179,7 @@ p {
 .cta-button:hover {
   background: #153e4d;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Shop page */
