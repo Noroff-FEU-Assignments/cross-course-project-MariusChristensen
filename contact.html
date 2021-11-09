@@ -37,7 +37,33 @@
       </section>
     </header>
     <main class="background">
-      <h1>Her kommer det contact info</h1>
+      <section class="contact-wrapper">
+        <div>
+          <h1>Contact Us</h1>
+        </div>
+        <div>
+          <p>There are many ways to reach us if you have any questions, concerns, or just need someone to talk to!</p>
+          <ul>
+            <li>Adress: Slottsplassen 1, 0010 Oslo, Norway</li>
+            <li>Email: Coolguys@Rainydays.com</li>
+            <li>Phone: 81549300</li>
+          </ul>
+          <p>
+            If any of those don't work for you, hit us up on this form, and we will get back to you as soon as possible.
+          </p>
+        </div>
+        <div>
+          <form class="contact-form" action="form-success.php" method="post">
+            <legend>Name:</legend>
+            <input type="text" name="name" />
+            <legend>Email:</legend>
+            <input type="email" name="email" />
+            <legend>Message:</legend>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+          </form>
+          <input class="button cta-button cta-button-small cta-contact" type="submit" value="Send!" />
+        </div>
+      </section>
     </main>
     <footer>
       <section class="footer-nav">
