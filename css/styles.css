@@ -245,6 +245,10 @@ input {
   margin-bottom: 50px;
 }
 
+.general-container h2 {
+  font-size: 1.8em;
+}
+
 .general-container ul {
   margin-top: 30px;
   text-decoration: underline;
