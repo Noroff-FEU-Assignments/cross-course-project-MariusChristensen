@@ -128,6 +128,12 @@ p {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+input {
+  border: 3px solid #3790b0;
+  border-radius: 10px;
+  min-height: 35px;
+}
+
 /* Homepage */
 
 .logo {
@@ -224,33 +230,27 @@ p {
   padding: 10px 30px;
 }
 
-/* About, Contact and page */
-.about-wrapper,
-.contact-wrapper,
-.product-wrapper {
+/* About, Contact and product pages */
+.general-container {
   margin: 10px auto;
   max-width: 700px;
   text-align: center;
 }
 
-.about-wrapper p,
-.contact-wrapper p,
-.product-wrapper p {
+.general-container p {
   margin: 20px;
 }
 
-.about-wrapper h1,
-.contact-wrapper h1,
-.product-wrapper h1 {
+.general-container h1 {
   margin-bottom: 50px;
 }
 
-.contact-wrapper ul {
+.general-container ul {
   margin-top: 30px;
   text-decoration: underline;
 }
 
-.contact-form {
+.general-form {
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 20px;
@@ -258,16 +258,42 @@ p {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.contact-form input,
+.general-form input,
 #textarea {
   margin: 0px 20px;
+  border: 3px solid #3790b0;
+  border-radius: 10px;
 }
 
-.contact-form label {
+.general-form label {
   color: #ececec;
   margin-bottom: -20px;
 }
 
+/* Checkout Stuff */
+.checkout-info {
+  margin: auto;
+  border: 3px solid #3790b0;
+}
+
+.checkout-info img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  justify-content: space-between;
+  max-width: 390px;
+}
+
+.payment label {
+  font-size: 0.8em;
+}
+
+/* Media Quires */
 @media (max-width: 720px) {
   .nav-mobile {
     display: flex;
@@ -299,10 +325,12 @@ p {
     font-size: 1em;
   }
 
-  .about-wrapper h1,
-  .contact-wrapper h1,
-  .product-wrapper h1 {
+  .general-container h1 {
     font-size: 1.8em;
     margin-bottom: 10px;
+  }
+
+  .general-container h2 {
+    font-size: 1.4em;
   }
 }
