@@ -63,10 +63,6 @@ footer {
   padding: 5px 0px 0px 0px;
 }
 
-.nav-mobile {
-  display: none;
-}
-
 #hamburger-menu {
   display: none;
 }
@@ -298,18 +294,10 @@ input {
 
 /* Media Quires */
 @media (max-width: 720px) {
-  .nav-mobile {
-    display: flex;
-  }
-
   .button {
     padding: 10px 30px;
     font-size: 1.8em;
     border-radius: 20px;
-  }
-
-  .nav-desktop {
-    display: none;
   }
 
   .slogan {
