@@ -7,7 +7,7 @@
     <meta name="description" content="Pushing the comfort zone with jackets for her and him" />
     <title>RainyDays | Home</title>
     <link rel="shortcut icon" type="image/jpg" href="/images/fav-icon.png" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/06b18f8bb9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Hotjar Tracking Code for https://rainydays-msc.netlify.app/index.html -->
     <script>
@@ -35,15 +35,23 @@
             <input type="checkbox" id="hamburger-menu" />
             <nav class="nav-style__menu">
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li>
+                  <a href="index.html"><i class="fa-solid fa-house fa-menu"></i>Home</a>
+                </li>
+                <li>
+                  <a href="shop.html"><i class="fa-solid fa-shirt fa-menu"></i>Shop</a>
+                </li>
+                <li>
+                  <a href="contact.html"><i class="fa-solid fa-envelope fa-menu"></i>Contact</a>
+                </li>
+                <li>
+                  <a href="about.html"><i class="fa-solid fa-circle-info fa-menu"></i>About</a>
+                </li>
               </ul>
             </nav>
           </div>
-          <a href="index.html"><img src="/assets/icon-home.png" alt="home icon" /></a>
-          <a href="checkout.html"><img src="/assets/icon-shopping-cart.png" alt="shopping cart icon" /></a>
+          <a href="index.html"><i class="fas fa-solid fa-house"></i></a>
+          <button class="open-cart"><i class="fas fa-solid fa-cart-shopping"></i></button>
         </nav>
       </section>
     </header>
@@ -65,6 +73,55 @@
           <a class="button cta-button" href="shop.html">Shop</a>
         </div>
       </section>
+      <dialog class="cart">
+        <div>
+          <h1>Checkout</h1>
+        </div>
+        <div class="checkout-info">
+          <img src="/images/shop-female2.jpg" alt="female wearing our jacket" />
+          <p>RainyDays All-Star Jacket</p>
+          <p>79.99$</p>
+        </div>
+        <div>
+          <form class="general-form" action="form-success.php" method="post">
+            <label>Name:</label>
+            <input type="text" name="name" />
+            <label>Email:</label>
+            <input type="email" name="email" />
+            <label>Address:</label>
+            <input type="text" name="address" />
+            <label>Postal Code:</label>
+            <input type="number" name="postal-code" />
+            <label>Country:</label>
+            <input type="Text" name="country" />
+            <div class="payment">
+              <div>
+                <label for="visa/mastercard">Visa/Mastercard</label>
+                <input type="radio" name="payment-method" id="visa/mastercard" />
+              </div>
+              <div>
+                <label for="paypal">Paypal</label>
+                <input type="radio" name="payment-method" id="paypal" />
+              </div>
+              <div>
+                <label for="carrier-pidgeon">Carrier-pidgeon</label>
+                <input type="radio" name="payment-method" id="carrier-pidgeon" />
+              </div>
+            </div>
+            <label>Name On Card:</label>
+            <input type="text" name="name" />
+            <label>Expiry Date:</label>
+            <input type="number" name="expiry-date" />
+            <label>CVC:</label>
+            <input type="number" name="cvc" />
+            <label>Card Number:</label>
+            <input type="number" name="card-number" />
+          </form>
+          <a href="/checkout-success.html"
+            ><input class="button cta-button cta-button-small cta-contact" type="submit" value="Purchase"
+          /></a>
+        </div>
+      </dialog>
     </main>
     <footer>
       <section class="footer-nav">
@@ -79,5 +136,6 @@
         </div>
       </section>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -10,6 +10,12 @@
 
 /* Global Styles*/
 
+dialog {
+  background-color: #153e4d;
+  border: solid #3790b0 3px;
+  text-align: center;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -83,9 +89,17 @@ footer {
   display: none;
 }
 
-.fa-bars {
+.fa-bars,
+.fa-solid {
+  cursor: pointer;
   color: #ececec;
   font-size: 52px;
+  margin-bottom: 5px;
+}
+
+.fa-menu {
+  font-size: 18px;
+  margin-right: 10px;
 }
 
 .footer-nav > *:first-child {
@@ -161,6 +175,14 @@ input {
 .button-wrapper {
   display: block;
   text-align: center;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 .button {
@@ -298,6 +320,20 @@ input {
     padding: 10px 30px;
     font-size: 1.8em;
     border-radius: 20px;
+  }
+
+  .fa-bars,
+  .fa-solid {
+    font-size: 35px;
+  }
+
+  .fa-menu {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .nav-style__menu {
+    top: 48px;
   }
 
   .slogan {
