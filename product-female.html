@@ -35,10 +35,18 @@
             <input type="checkbox" id="hamburger-menu" />
             <nav class="nav-style__menu">
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li>
+                  <a href="index.html"><i class="fa-solid fa-house fa-menu"></i>Home</a>
+                </li>
+                <li>
+                  <a href="shop.html"><i class="fa-solid fa-shirt fa-menu"></i>Shop</a>
+                </li>
+                <li>
+                  <a href="contact.html"><i class="fa-solid fa-envelope fa-menu"></i>Contact</a>
+                </li>
+                <li>
+                  <a href="about.html"><i class="fa-solid fa-circle-info fa-menu"></i>About</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -54,13 +62,14 @@
           <img src="/images/shop-female.jpg" alt="woman wearing our jacket" />
           <p>
             The RainyDays All-Star Jacket for women is specifically developed for anyone interested in being outdoors
-            24/7. Wether it be hiking, exploring, skiing, camping or canoing, we got you covered!
+            24/7. Wether it be hiking, exploring, skiing, camping or canoeing, we got you covered!
           </p>
           <p>Durable and soft on the wallet, what more could you ever want? Get yours now!</p>
           <p>79.99$</p>
-          <a class="button cta-button cta-button-small" href="checkout.html">Buy Now</a>
+          <button class="button cta-button cta-button-small">Add to cart</button>
         </div>
       </section>
+      <dialog class="cart"></dialog>
     </main>
     <footer>
       <section class="footer-nav">
@@ -75,6 +84,6 @@
         </div>
       </section>
     </footer>
-    <script src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>

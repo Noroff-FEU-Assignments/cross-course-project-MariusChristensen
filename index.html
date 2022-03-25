@@ -73,55 +73,7 @@
           <a class="button cta-button" href="shop.html">Shop</a>
         </div>
       </section>
-      <dialog class="cart">
-        <div>
-          <h1>Checkout</h1>
-        </div>
-        <div class="checkout-info">
-          <img src="/images/shop-female2.jpg" alt="female wearing our jacket" />
-          <p>RainyDays All-Star Jacket</p>
-          <p>79.99$</p>
-        </div>
-        <div>
-          <form class="general-form" action="form-success.php" method="post">
-            <label>Name:</label>
-            <input type="text" name="name" />
-            <label>Email:</label>
-            <input type="email" name="email" />
-            <label>Address:</label>
-            <input type="text" name="address" />
-            <label>Postal Code:</label>
-            <input type="number" name="postal-code" />
-            <label>Country:</label>
-            <input type="Text" name="country" />
-            <div class="payment">
-              <div>
-                <label for="visa/mastercard">Visa/Mastercard</label>
-                <input type="radio" name="payment-method" id="visa/mastercard" />
-              </div>
-              <div>
-                <label for="paypal">Paypal</label>
-                <input type="radio" name="payment-method" id="paypal" />
-              </div>
-              <div>
-                <label for="carrier-pidgeon">Carrier-pidgeon</label>
-                <input type="radio" name="payment-method" id="carrier-pidgeon" />
-              </div>
-            </div>
-            <label>Name On Card:</label>
-            <input type="text" name="name" />
-            <label>Expiry Date:</label>
-            <input type="number" name="expiry-date" />
-            <label>CVC:</label>
-            <input type="number" name="cvc" />
-            <label>Card Number:</label>
-            <input type="number" name="card-number" />
-          </form>
-          <a href="/checkout-success.html"
-            ><input class="button cta-button cta-button-small cta-contact" type="submit" value="Purchase"
-          /></a>
-        </div>
-      </dialog>
+      <dialog class="cart"></dialog>
     </main>
     <footer>
       <section class="footer-nav">
@@ -136,6 +88,6 @@
         </div>
       </section>
     </footer>
-    <script src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>
