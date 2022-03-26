@@ -15,12 +15,6 @@ function addItemToCart(item) {
   lsSetObject("cart", items);
 }
 
-function removeItemFromCart(item) {
-  const items = lsGetObject("cart") || [];
-  items.filter((i) => i.id === item.id);
-  lsSetObject("cart", items);
-}
-
 function clearCart() {
   lsSetObject("cart", []);
 }
@@ -39,6 +33,8 @@ if (buyBtn) {
   });
 }
 
+let pendingPurchase = false;
+
 openCart.addEventListener("click", () => {
   const cartItems = lsGetObject("cart") || [];
   if (cartItems.length === 0) {
@@ -50,23 +46,27 @@ openCart.addEventListener("click", () => {
 });
 
 window.onclick = function (event) {
-  if (event.target === cart) {
+  if (!pendingPurchase && event.target === cart) {
     cart.close();
-    clearCart();
+  }
+
+  if (event.target.id === "submit-purchase") {
+    pendingPurchase = true;
+    event.stopPropagation();
+    createLoadingHTML();
+    setTimeout(() => {
+      pendingPurchase = false;
+      const cartItems = lsGetObject("cart") || [];
+      clearCart();
+      createSuccessHTML(cartItems);
+    }, 2000);
   }
 };
 
-function createEmptyCartHTML() {
+function createSuccessHTML(cartItems = []) {
   cart.innerHTML = `
-    <div>Nothing to see here</div>
-  `;
-}
-
-function createCartHTML(cartItems = []) {
-  cart.innerHTML = `
-    <div>
       <div>
-        <h1>Checkout</h1>
+        <h1>Checkout Success!</h1>
       </div>
       <div class="checkout-info">
         ${cartItems.map(
@@ -78,7 +78,50 @@ function createCartHTML(cartItems = []) {
         )}
       </div>
       <div>
-        <form class="general-form" action="form-success.php" method="post">
+        <h2>Thank you for your purchase!</h2>
+        <p>We here at RainyDays are certain that you will enjoy your new jacket for years and years to come!</p>
+        <p>
+          A confirmation email has been sent to Coolerguys@coolmail.com. Another email will be sent when the jacket is <br/>        
+          shipped, along with a tracking number so you can sit by the door and wait as soon as it arrives.
+        </p>
+      </div>`;
+}
+
+function createLoadingHTML() {
+  cart.innerHTML = `<img src="/images/spinner.gif" />`;
+}
+
+function createEmptyCartHTML() {
+  cart.innerHTML = `
+    <div>
+      <h1>Nothing to see here <i class="fa-solid fa-face-frown"></i></h1>
+      <p>Press the button below to go to our shop!</p>
+      <a class="button cta-button" href="shop.html">Shop</a>
+    </div>
+  `;
+}
+
+function createCartHTML(cartItems = []) {
+  const cartSum = cartItems.reduce((sum, item) => sum + item.price, 0);
+  cart.innerHTML = `
+    <div>
+      <div>
+        <h1>Checkout</h1>
+      </div>
+      <div class="checkout-info">
+        ${cartItems.map(
+          (item) => `
+          <img src="${item.image}" />
+          <p>${item.name}</p>
+          <p>${item.price}$</p>
+        `
+        )}
+        <div>
+        <p>Sum total: ${cartSum.toFixed(2)}$</p>
+        </div>
+      </div>
+      <div>
+        <form class="general-form" action="#">
           <label>Name:</label>
           <input type="text" name="name" />
           <label>Email:</label>
@@ -112,13 +155,12 @@ function createCartHTML(cartItems = []) {
           <label>Card Number:</label>
           <input type="number" name="card-number" />
         </form>
-        <a href="/checkout-success.html">
-          <input
-            class="button cta-button cta-button-small cta-contact"
-            type="submit"
-            value="Purchase"
-          />
-        </a>
+        <input
+          id="submit-purchase"
+          class="button cta-button cta-button-small cta-contact"
+          type="submit"
+          value="Purchase"
+        />
       </div>
     </div>`;
 }

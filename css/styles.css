@@ -10,13 +10,6 @@
 
 /* Global Styles*/
 
-dialog {
-  background-color: #153e4d;
-  border: solid #3790b0 3px;
-  text-align: center;
-  padding: 0px;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -143,6 +136,18 @@ input {
   border: 3px solid #3790b0;
   border-radius: 10px;
   min-height: 35px;
+}
+
+dialog {
+  background-color: #153e4d;
+  border: solid #3790b0 3px;
+  text-align: center;
+  padding: 0px;
+}
+
+dialog::backdrop {
+  background: #438aa4;
+  opacity: 50%;
 }
 
 /* Homepage */
