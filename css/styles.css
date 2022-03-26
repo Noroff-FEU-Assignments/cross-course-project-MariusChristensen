@@ -14,6 +14,7 @@ dialog {
   background-color: #153e4d;
   border: solid #3790b0 3px;
   text-align: center;
+  padding: 0px;
 }
 
 html {
@@ -299,7 +300,9 @@ button {
 
 .checkout-info img {
   border-radius: 50%;
+  object-fit: cover;
   height: 100px;
+  width: 100px;
 }
 
 .payment {
