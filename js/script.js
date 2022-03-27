@@ -88,7 +88,7 @@ function createSuccessHTML(cartItems = []) {
 }
 
 function createLoadingHTML() {
-  cart.innerHTML = `<img src="/images/spinner.gif" />`;
+  cart.innerHTML = `<img src="/images/loader.gif" />`;
 }
 
 function createEmptyCartHTML() {

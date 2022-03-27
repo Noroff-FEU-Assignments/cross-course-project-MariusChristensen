@@ -315,7 +315,7 @@ button {
   flex-direction: row;
   margin: 10px auto;
   justify-content: space-between;
-  max-width: 390px;
+  max-width: 380px;
 }
 
 .payment label {
