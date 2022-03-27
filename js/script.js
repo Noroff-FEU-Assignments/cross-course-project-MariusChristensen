@@ -96,7 +96,7 @@ function createEmptyCartHTML() {
     <div>
       <h1>Nothing to see here <i class="fa-solid fa-face-frown"></i></h1>
       <p>Press the button below to go to our shop!</p>
-      <a class="button cta-button" href="shop.html">Shop</a>
+      <a class="button cta-button cta-button-small" href="shop.html">Shop</a>
     </div>
   `;
 }

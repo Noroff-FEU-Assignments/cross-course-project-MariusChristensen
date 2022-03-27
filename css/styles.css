@@ -191,7 +191,6 @@ button {
   background: none;
   border: none;
   padding: 0;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 
@@ -201,6 +200,7 @@ button {
   font-size: 2em;
   padding: 20px 50px;
   width: auto;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin: 20px;
   border: #3790b0 solid 3px;
 }
@@ -300,6 +300,26 @@ button {
 .general-form label {
   color: #ececec;
   margin-bottom: -20px;
+}
+
+input:valid + .contact-message {
+  display: none;
+}
+
+input:invalid + .contact-message {
+  display: block;
+}
+
+.contact-message {
+  margin: 0px auto;
+  background: #3790b0;
+  color: #ececec;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.cta-contact {
+  width: 200px;
 }
 
 /* Checkout Stuff */
