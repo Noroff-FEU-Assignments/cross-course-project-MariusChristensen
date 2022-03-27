@@ -78,12 +78,12 @@ function createSuccessHTML(cartItems = []) {
         )}
       </div>
       <div>
-        <h2>Thank you for your purchase!</h2>
-        <p>We here at RainyDays are certain that you will enjoy your new jacket for years and years to come!</p>
-        <p>
-          A confirmation email has been sent to Coolerguys@coolmail.com. Another email will be sent when the jacket is <br/>        
-          shipped, along with a tracking number so you can sit by the door and wait as soon as it arrives.
-        </p>
+        <h2>Thank you for <br/>  your purchase!</h2>
+        <p>We here at RainyDays are certain that you will <br/>  enjoy your new jacket for years and years to come!</p>
+        <p>A confirmation email has been sent to <br/>  Coolerguys@coolmail.com.</p>
+        <p>Another email will be sent when the jacket is shipped, <br/>  along with a tracking number so you can sit by <br/>  the door and wait as soon as it arrives.</p>
+          
+        
       </div>`;
 }
 

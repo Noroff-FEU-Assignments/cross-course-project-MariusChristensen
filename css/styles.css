@@ -145,6 +145,10 @@ dialog {
   padding: 0px;
 }
 
+dialog h1 {
+  margin: 10px 30px;
+}
+
 dialog::backdrop {
   background: #438aa4;
   opacity: 50%;
