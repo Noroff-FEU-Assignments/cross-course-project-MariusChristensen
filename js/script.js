@@ -1,5 +1,3 @@
-import { jackets } from "./components/jackets.js";
-
 function lsGetObject(key) {
   const obj = localStorage.getItem(key);
   return obj && JSON.parse(obj);
@@ -17,6 +15,40 @@ function addItemToCart(item) {
 
 function clearCart() {
   lsSetObject("cart", []);
+}
+
+const url = "https://mariuschristensen.one/my-first-api/wp-json/wc/store/products/";
+const jacketContainer = document.querySelector(".shop");
+
+async function fetchJackets() {
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    const jackets = json;
+
+    jacketContainer.innerHTML = "";
+
+    for (let i = 0; i < jackets.length; i++) {
+      createHTML(jackets, i);
+    }
+  } catch (error) {
+    console.log("This happened while trying to reach the API: " + error);
+    jacketContainer.innerHTML = "This happened while trying to reach the API " + error;
+  }
+}
+
+fetchJackets();
+
+function createHTML(jackets, i) {
+  jacketContainer.innerHTML += `<div class="shop-card">
+                                  <h2>${jackets[i].name}</h2>
+                                  <img src="${jackets[i].images[0].thumbnail}"></img>
+                                  <p>${jackets[i].price_html}</p>
+                                  <p>${jackets[i].short_description}</p>
+                                  <div class="button-wrapper">
+                                  <a class="button cta-button cta-button-small" href="/product.html?id=${jackets[i].id}">View</a>
+                                  </div>
+                                </div>`;
 }
 
 const cart = document.querySelector(".cart");
@@ -163,4 +195,39 @@ function createCartHTML(cartItems = []) {
         />
       </div>
     </div>`;
+}
+
+const productContainer = document.querySelector(".product-container");
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+const productUrl = "https://mariuschristensen.one/my-first-api/wp-json/wc/store/products/" + id;
+const title = document.querySelector("title");
+
+async function fetchProducts() {
+  try {
+    const response = await fetch(productUrl);
+    const json = await response.json();
+    const productDetails = json;
+
+    createProductHTML(productDetails);
+    createTitle(productDetails);
+  } catch (error) {
+    console.log("This happened while trying to reach the API: " + error);
+    productContainer.innerHTML = "This happened while trying to reach the API " + error;
+  }
+}
+
+fetchProducts();
+
+function createProductHTML(productDetails) {
+  productContainer.innerHTML += `<h1>${productDetails.name}</h1>
+                                <img src="${productDetails.images[0].thumbnail}"></img>
+                                <p>${productDetails.price_html}</p>
+                                <p>${productDetails.description}</p>
+                                <button id="buy-btn" data-product-id="1" class="button cta-button cta-button-small">Add to cart</button>`;
+}
+
+function createTitle(productDetails) {
+  title.textContent = productDetails.name;
 }

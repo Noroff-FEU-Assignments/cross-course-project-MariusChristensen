@@ -241,16 +241,15 @@ button {
   font-size: 1.2em;
 }
 
-.shop-her,
-.shop-him {
+.shop-card {
   display: grid;
   margin: 10px;
   border: #3790b0 solid 3px;
 }
 
-.shop-her img,
-.shop-him img {
-  width: 100%;
+.shop-card img {
+  width: 90%;
+  margin: 0px auto;
 }
 
 .cta-button-small {
