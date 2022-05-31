@@ -61,9 +61,6 @@ This is where you can leave your social links for people to contact you, such as
 
 [My LinkedIn page](www.linkedin.com)
 
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
 
 ## Acknowledgments
 
