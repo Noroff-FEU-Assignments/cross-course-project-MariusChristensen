@@ -1,69 +1,27 @@
-# Cross Course Project (Rainy Days)
+# Cross-Course Project (Rainy Days)
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://i.gyazo.com/b830b1c32076ac689da892d419f932f9.jpg)
 
-A simple overview of the use/purpose of the project.
+Cross-Course Project for an e-commerce sites called Rainy Days
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+Bigger project that has been worked on multiple times the first year. We started out just making a pretty basic website using just HTML & CSS, then expanding on that and adding Javascript and the Wordpress REST API as we learned more throughout the year. It's just a very basic e-commerce site selling jackets. Somewhat of a nightmare cleaning up the mess I made 8ish months ago, but it's a really good learning experience on how to write neat and good code early on in a project!
 
 ## Built With
 
-You can list a the tech stack that you've used over here
+- HTML
+- CSS
+- Javascript
+- Wordpress REST API
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
-
-## Getting Started
-
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
-
-```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+As this is a school project i'm not looking for any contributions, but maybe in the future!
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+If you want, feel free to contact me on my twitter!
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
-
-
+[My Twitter page](https://twitter.com/MariusC88)
